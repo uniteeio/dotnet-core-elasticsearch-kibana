@@ -35,22 +35,6 @@
           "target": "Package",
           "version": "[2.0.0, )",
           "autoReferenced": true
-        },
-        "Serilog": {
-          "target": "Package",
-          "version": "[2.6.0, )"
-        },
-        "Serilog.Extensions.Logging": {
-          "target": "Package",
-          "version": "[2.0.2, )"
-        },
-        "Serilog.Settings.Configuration": {
-          "target": "Package",
-          "version": "[2.5.0, )"
-        },
-        "Serilog.Sinks.Elasticsearch": {
-          "target": "Package",
-          "version": "[6.1.0, )"
         }
       },
       "imports": [
