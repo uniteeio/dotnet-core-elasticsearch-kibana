@@ -33,8 +33,23 @@
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
-          "version": "[2.0.0, )",
-          "autoReferenced": true
+          "version": "[2.0.5, )"
+        },
+        "Serilog": {
+          "target": "Package",
+          "version": "[2.6.0, )"
+        },
+        "Serilog.Extensions.Logging": {
+          "target": "Package",
+          "version": "[2.0.2, )"
+        },
+        "Serilog.Settings.Configuration": {
+          "target": "Package",
+          "version": "[2.5.0, )"
+        },
+        "Serilog.Sinks.Elasticsearch": {
+          "target": "Package",
+          "version": "[6.1.0, )"
         }
       },
       "imports": [

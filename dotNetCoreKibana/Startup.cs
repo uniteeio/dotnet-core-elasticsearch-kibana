@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Serilog;
 
 namespace dotNetCoreKibana
 {
@@ -16,6 +17,10 @@ namespace dotNetCoreKibana
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+    
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(Configuration)
+                .CreateLogger();
         }
 
         public IConfiguration Configuration { get; }
@@ -23,6 +28,11 @@ namespace dotNetCoreKibana
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Serilog
+            services.AddLogging(
+                loggingBuilder => loggingBuilder.AddSerilog(dispose: true)
+            );
+    
             services.AddMvc();
         }
 
